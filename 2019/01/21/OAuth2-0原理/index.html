@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="OAuth2.0,">
 
 
 
@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="xuh的小屋">
-<meta property="og:url" content="https://blog.xuhweb.cn/archives/2019/index.html">
+<meta name="description" content="OAuth 2.0基本原理 过滤器 UsernamePasswordAuthenticationFilter  处理表单登录操作  BasicAuthenticationFilter 处理HTTP Basic登录请求  …  FilterSecurityIntercepter 这个Spring Security 过滤器链的最后一个过滤器. 可以在这个过滤器中添加特殊处理  ExceptionTra">
+<meta name="keywords" content="OAuth2.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OAuth2.0原理">
+<meta property="og:url" content="https://blog.xuhweb.cn/2019/01/21/OAuth2-0原理/index.html">
 <meta property="og:site_name" content="xuh的小屋">
+<meta property="og:description" content="OAuth 2.0基本原理 过滤器 UsernamePasswordAuthenticationFilter  处理表单登录操作  BasicAuthenticationFilter 处理HTTP Basic登录请求  …  FilterSecurityIntercepter 这个Spring Security 过滤器链的最后一个过滤器. 可以在这个过滤器中添加特殊处理  ExceptionTra">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://blog.xuhweb.cn/2019/01/21/image/auth-filters.png">
+<meta property="og:updated_time" content="2019-05-15T04:23:10.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xuh的小屋">
+<meta name="twitter:title" content="OAuth2.0原理">
+<meta name="twitter:description" content="OAuth 2.0基本原理 过滤器 UsernamePasswordAuthenticationFilter  处理表单登录操作  BasicAuthenticationFilter 处理HTTP Basic登录请求  …  FilterSecurityIntercepter 这个Spring Security 过滤器链的最后一个过滤器. 可以在这个过滤器中添加特殊处理  ExceptionTra">
+<meta name="twitter:image" content="https://blog.xuhweb.cn/2019/01/21/image/auth-filters.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.xuhweb.cn/archives/2019/">
+  <link rel="canonical" href="https://blog.xuhweb.cn/2019/01/21/OAuth2-0原理/">
 
 
 
 
 
-  <title>归档 | xuh的小屋</title>
+  <title>OAuth2.0原理 | xuh的小屋</title>
   
 
 
@@ -150,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -244,317 +251,204 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuhweb.cn/2019/01/21/OAuth2-0原理/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xuh-code">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header-img.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xuh的小屋">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">OAuth2.0原理</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-21T21:38:06+08:00">
+                2019-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/OAuth2-0/" itemprop="url" rel="index">
+                    <span itemprop="name">OAuth2.0</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/21/程序包javax-servlet-http不存在/" itemprop="url">
-              
-                <span itemprop="name">程序包javax.servlet.http不存在</span>
-              
-            </a>
-        
-      </h2>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-21T22:00:40+08:00" content="2019-01-21">
-          01-21
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/21/OAuth2-0原理/" itemprop="url">
-              
-                <span itemprop="name">OAuth2.0原理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-21T21:38:06+08:00" content="2019-01-21">
-          01-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/17/spring-boot-jar包启动切换配置文件/" itemprop="url">
-              
-                <span itemprop="name">spring boot jar包启动切换配置文件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-17T18:17:33+08:00" content="2019-01-17">
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="OAuth-2-0基本原理"><a href="#OAuth-2-0基本原理" class="headerlink" title="OAuth 2.0基本原理"></a>OAuth 2.0基本原理</h2><p><img src="../image/auth-filters.png" alt="auth-filters"></p>
+<h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><ol>
+<li><p>UsernamePasswordAuthenticationFilter </p>
+<p>处理表单登录操作</p>
+</li>
+<li><p>BasicAuthenticationFilter</p>
+<p>处理HTTP Basic登录请求</p>
+</li>
+<li><p>…</p>
+</li>
+<li><p>FilterSecurityIntercepter</p>
+<p>这个Spring Security 过滤器链的最后一个过滤器.</p>
+<p>可以在这个过滤器中添加特殊处理</p>
+</li>
+<li><p>ExceptionTranslationFilter</p>
+<p>在FilterSecurityIntercepter之前, 用来捕获 FilterSecurityIntercepter抛出的异常</p>
+<p>根据抛出的异常做相应的处理</p>
+</li>
+</ol>
+<ul>
+<li>绿色部分的过滤器是可以通过配置的控制生效</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SecurityConfiguration extends WebSecurityConfigurerAdapter &#123;       </span><br><span class="line">       </span><br><span class="line">       http.formLogin()</span><br><span class="line">                .and()</span><br><span class="line">                //  任何请求都需要认证</span><br><span class="line">                .authorizeRequests()</span><br><span class="line">                .anyRequest()</span><br><span class="line">                .authenticated();</span><br><span class="line">                </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基于表单的认证"><a href="#基于表单的认证" class="headerlink" title="基于表单的认证"></a>基于表单的认证</h2><h3 id="自定义用户认证逻辑"><a href="#自定义用户认证逻辑" class="headerlink" title="自定义用户认证逻辑"></a>自定义用户认证逻辑</h3><ol>
+<li>处理用户信息获取逻辑</li>
+<li>​</li>
+</ol>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/11/IDEA设置Run-Dashboard/" itemprop="url">
-              
-                <span itemprop="name">IDEA设置Run Dashboard</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-11T18:09:11+08:00" content="2019-01-11">
-          01-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/11/hexo命令/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-11T10:24:44+08:00" content="2019-01-11">
-          01-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/10/hexo设置标签分类/" itemprop="url">
-              
-                <span itemprop="name">hexo设置标签分类</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-10T22:11:33+08:00" content="2019-01-10">
-          01-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/10/JPA相关知识点/" itemprop="url">
-              
-                <span itemprop="name">JPA相关知识点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-10T14:22:29+08:00" content="2019-01-10">
-          01-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/10/Google浏览器自动跳转https/" itemprop="url">
-              
-                <span itemprop="name">Google浏览器自动跳转https</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-10T11:15:27+08:00" content="2019-01-10">
-          01-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OAuth2-0/" rel="tag"><i class="fa fa-tag"></i> OAuth2.0</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/17/spring-boot-jar包启动切换配置文件/" rel="next" title="spring boot jar包启动切换配置文件">
+                <i class="fa fa-chevron-left"></i> spring boot jar包启动切换配置文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/21/程序包javax-servlet-http不存在/" rel="prev" title="程序包javax.servlet.http不存在">
+                程序包javax.servlet.http不存在 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -562,6 +456,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -582,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -645,6 +552,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#OAuth-2-0基本原理"><span class="nav-number">1.</span> <span class="nav-text">OAuth 2.0基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#过滤器"><span class="nav-number">1.1.</span> <span class="nav-text">过滤器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于表单的认证"><span class="nav-number">2.</span> <span class="nav-text">基于表单的认证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义用户认证逻辑"><span class="nav-number">2.1.</span> <span class="nav-text">自定义用户认证逻辑</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -798,6 +721,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

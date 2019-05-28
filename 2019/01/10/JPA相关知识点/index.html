@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="JPA设置字段Boolean类型默认值 12@Column(columnDefinition=&amp;quot;tinyint(1) default 1&amp;quot;)private boolean is_bind; 设置实体索引12345indexes = &amp;#123;        @Index(name = &amp;quot;user_info_third_id_type_index&amp;quot;, col">
+<meta name="description" content="JPA设置字段Boolean类型默认值 12@Column(columnDefinition=&amp;quot;tinyint(1) default 1&amp;quot;)private boolean is_bind;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JPA相关知识点">
-<meta property="og:url" content="http://yoursite.com/2019/01/10/JPA相关知识点/index.html">
+<meta property="og:url" content="https://blog.xuhweb.cn/2019/01/10/JPA相关知识点/index.html">
 <meta property="og:site_name" content="xuh的小屋">
-<meta property="og:description" content="JPA设置字段Boolean类型默认值 12@Column(columnDefinition=&amp;quot;tinyint(1) default 1&amp;quot;)private boolean is_bind; 设置实体索引12345indexes = &amp;#123;        @Index(name = &amp;quot;user_info_third_id_type_index&amp;quot;, col">
+<meta property="og:description" content="JPA设置字段Boolean类型默认值 12@Column(columnDefinition=&amp;quot;tinyint(1) default 1&amp;quot;)private boolean is_bind;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-10T06:26:56.175Z">
+<meta property="og:updated_time" content="2019-05-15T04:23:10.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JPA相关知识点">
-<meta name="twitter:description" content="JPA设置字段Boolean类型默认值 12@Column(columnDefinition=&amp;quot;tinyint(1) default 1&amp;quot;)private boolean is_bind; 设置实体索引12345indexes = &amp;#123;        @Index(name = &amp;quot;user_info_third_id_type_index&amp;quot;, col">
+<meta name="twitter:description" content="JPA设置字段Boolean类型默认值 12@Column(columnDefinition=&amp;quot;tinyint(1) default 1&amp;quot;)private boolean is_bind;">
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/10/JPA相关知识点/">
+  <link rel="canonical" href="https://blog.xuhweb.cn/2019/01/10/JPA相关知识点/">
 
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/10/JPA相关知识点/">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuhweb.cn/2019/01/10/JPA相关知识点/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xuh-code">
@@ -335,7 +335,12 @@
 
       
         <h4 id="JPA设置字段Boolean类型默认值"><a href="#JPA设置字段Boolean类型默认值" class="headerlink" title="JPA设置字段Boolean类型默认值"></a>JPA设置字段Boolean类型默认值</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Column(columnDefinition=&quot;tinyint(1) default 1&quot;)</span><br><span class="line">private boolean is_bind;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h4 id="设置实体索引"><a href="#设置实体索引" class="headerlink" title="设置实体索引"></a>设置实体索引</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">indexes = &#123;</span><br><span class="line">        @Index(name = &quot;user_info_third_id_type_index&quot;, columnList = &quot;user_id,third_info_id,user_info_type&quot;),</span><br><span class="line">        @Index(name = &quot;user_id_index&quot;, columnList = &quot;user_id&quot;),</span><br><span class="line">        @Index(name = &quot;third_id&quot;, columnList = &quot;third_info_id&quot;),</span><br><span class="line">        @Index(name = &quot;TYPE_INDEX&quot;, columnList = &quot;user_info_type&quot;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>columnList可以设置多个值, 设置组合索引</li>
+<li></li>
+</ul>
 
       
     </div>
@@ -451,7 +456,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -462,7 +467,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -473,7 +478,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
